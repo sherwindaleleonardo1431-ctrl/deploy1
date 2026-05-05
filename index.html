@@ -17,7 +17,7 @@
             border-radius: 10px;
             display: inline-block;
             margin-top: 50px;
-            color: white;
+            color: rgb(12, 1, 1);
         }
 
         input, button {
@@ -29,7 +29,7 @@
             margin: auto;
             border-collapse: collapse;
             width: 80%;
-            background: white;
+            background: rgb(145, 112, 112);
             color: black;
         }
 
@@ -40,16 +40,16 @@
 
         th {
             background: #333;
-            color: white;
+            color: rgb(24, 23, 23);
         }
     </style>
 </head>
 
 <body>
 
-<!-- 🔐 LOGIN SCREEN -->
+<!--  LOGIN SCREEN -->
 <div id="loginBox" class="box">
-    <h2>🔐 Login</h2>
+    <h2> Login</h2>
     <input type="text" id="username" placeholder="Username"><br>
     <input type="password" id="password" placeholder="Password"><br>
     <button onclick="login()">Login</button>
@@ -94,7 +94,7 @@
 <script>
 let products = [];
 
-/* 🔐 LOGIN SYSTEM */
+/*  LOGIN SYSTEM */
 function login() {
     let user = document.getElementById("username").value;
     let pass = document.getElementById("password").value;
@@ -154,7 +154,6 @@ function display() {
         </tr>`;
     });
 
-    // 📊 SHOW SUMMARY
     document.getElementById("summary").innerHTML =
         "📦 Products: " + totalProducts +
         " | 🧮 Quantity: " + totalQty +
@@ -290,3 +289,99 @@ function clearAll() {
         color: white;
     }
 </style>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Register System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 320px;
+            text-align: center;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Create Account</h2>
+
+    <form action="/register" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Register & Enter</button>
+    </form>
+
+    <a href="/guest">
+        <button>Continue as Guest</button>
+    </a>
+</div>
+
+</body>
+</html>
